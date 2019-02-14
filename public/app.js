@@ -1,3 +1,9 @@
+$(".btnScrape").on("click", function(){
+  $.getJSON("/api/scrape", function(data){
+    console.log(scraped)
+  });
+});
+
 // Grab the articles as a json
 $.getJSON("/articles", function(data) {
     // For each one
@@ -46,7 +52,7 @@ $.getJSON("/articles", function(data) {
       $(this).text("Show Comments");
     }
     $(this).parents("div.card").find("div#comments").toggleClass("d-none");
-    $(this).parents("div.card").find("div#addComment").toggleClass("d-none");
+    $(this).parents("div.card").find("div#addComment").toggleClass("d-none"); 
   });
   
   $(document).on("click", "button#addCommentButton", function() {
