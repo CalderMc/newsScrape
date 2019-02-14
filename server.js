@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 var app = express();
 
 //Connect to MongoDB
-const mongo_uri = process.env.MONGO_URI || "mongodb://localhost/newsScrape"
+const mongo_uri = process.env.MONGODB_URI || "mongodb://localhost/newsScrape"
 mongoose.connect(mongo_uri);
 
 const apiRoutes = require("./routes/api.js");
